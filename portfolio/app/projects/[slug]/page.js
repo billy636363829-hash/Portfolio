@@ -1,58 +1,37 @@
 import Header from '@/app/components/Header';
-import ProjectDetailsClient from './ProjectDetailsClient';
+import React from 'react';
 
 export default function ProjectDetails({ params }) {
-
+  // Dummy data for demonstration
   const projectData = {
     'recruitment-web-app': {
       title: 'Recruitment Web App',
-      description: 'A full-stack recruitment web application designed to streamline the hiring process. Built with modern technologies, this platform enables recruiters to manage candidates, schedule interviews, and collaborate with team members efficiently.',
-      longDescription: 'This comprehensive recruitment platform features real-time collaboration, automated candidate screening, and advanced analytics. The application integrates with popular job boards and provides a seamless experience for both recruiters and candidates.',
+      description: 'A full-stack recruitment web application built with Next.js, Node.js, Clerk, and MongoDB',
       technologies: [
-        { name: 'Next.js', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', color: 'bg-gray-900 dark:bg-white' },
-        { name: 'Node.js', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', color: 'bg-green-600' },
-        { name: 'Clerk', image: 'https://ph-files.imgix.net/297bc3d4-bd2e-4eaa-8fb6-a289cf61ea91.png?auto=format', color: 'bg-blue-600' },
-        { name: 'MongoDB', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg', color: 'bg-green-500' },
-      ],
-      gallery: [
-        'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+        { name: 'Next.js', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+        { name: 'Node.js', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'Clerk', image: 'https://ph-files.imgix.net/297bc3d4-bd2e-4eaa-8fb6-a289cf61ea91.png?auto=format' },
+        { name: 'MongoDB', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
       ],
       github: 'https://github.com/yourusername/recruitment-web-app',
       live: 'https://yourusername.github.io/recruitment-web-app/',
     },
     'project-2': {
-      title: 'Mobile Weather App',
-      description: 'A beautiful and intuitive mobile weather application that provides real-time weather updates, forecasts, and severe weather alerts.',
-      longDescription: 'This cross-platform mobile app delivers accurate weather information with a focus on user experience. Features include location-based forecasts, interactive weather maps, customizable alerts, and detailed meteorological data.',
+      title: 'Project 2',
+      description: 'Mobile app developed using React Native and Firebase',
       technologies: [
-        { name: 'React Native', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'bg-blue-500' },
-        { name: 'Firebase', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg', color: 'bg-yellow-500' },
-        { name: 'TypeScript', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', color: 'bg-blue-600' },
-      ],
-      gallery: [
-        'https://images.pexels.com/photos/1002739/pexels-photo-1002739.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&w=800',
+        { name: 'React Native', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Firebase', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
       ],
       github: 'https://github.com/yourusername/project-2',
       live: 'https://yourusername.github.io/project-2/',
     },
     'project-3': {
-      title: 'AI Analytics Dashboard',
-      description: 'An advanced analytics platform powered by machine learning that provides predictive insights and data visualization for business intelligence.',
-      longDescription: 'This sophisticated dashboard leverages machine learning algorithms to analyze complex datasets and generate actionable insights. Features include real-time data processing, customizable visualizations, automated reporting, and AI-powered recommendations.',
+      title: 'Project 3',
+      description: 'Machine learning model for predictive analytics',
       technologies: [
-        { name: 'Python', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', color: 'bg-blue-500' },
-        { name: 'TensorFlow', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg', color: 'bg-orange-500' },
-        { name: 'React', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'bg-blue-400' },
-        { name: 'PostgreSQL', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', color: 'bg-blue-700' },
-      ],
-      gallery: [
-        'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800',
+        { name: 'Python', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+        { name: 'scikit-learn', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg' },
       ],
       github: 'https://github.com/yourusername/project-3',
       live: 'https://yourusername.github.io/project-3/',
@@ -63,13 +42,65 @@ export default function ProjectDetails({ params }) {
     title: 'Project Not Found',
     description: 'No description available.',
     technologies: [],
-    gallery: [],
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      <Header />
-      <ProjectDetailsClient project={project} />
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 p-0">
+      <Header/>
+      <head>
+        <title>{project.title} | Portfolio</title>
+      </head>
+      <section className="flex flex-col w-full min-h-screen justify-center items-center pt-12 pb-8">
+        <h1 className="text-5xl font-bold text-center text-gray-900 dark:text-white mb-12 mt-2">{project.title}</h1>
+        <div className="flex flex-col md:flex-row w-full max-w-5xl gap-10 md:gap-20 px-4 md:px-0">
+          {/* Description on the left */}
+          <div className="flex-1 flex flex-col justify-center items-start bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8 md:mb-0">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Project Overview</h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300">{project.description}</p>
+            <div className="flex flex-row gap-4 mt-6">
+              <a
+                href={project.github || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg shadow hover:bg-gray-800 transition-colors duration-200"
+              >
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="w-5 h-5 mr-2" />
+                View on GitHub
+              </a>
+              <a
+                href={project.live || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors duration-200"
+              >
+                <img src="/favicon.ico" alt="Web" className="w-5 h-5 mr-2" />
+                View Web Page
+              </a>
+            </div>
+          </div>
+          {/* Technologies and choices on the right */}
+          <div className="flex-1 flex flex-col justify-center items-start bg-gray-100 dark:bg-gray-700 rounded-xl shadow p-8">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Technologies Used</h2>
+            <div className="flex flex-wrap gap-6 mb-6">
+              {project.technologies.length > 0 ? (
+                project.technologies.map((tech) => (
+                  <div key={tech.name} className="flex flex-col items-center">
+                    <img src={tech.image} alt={tech.name} className="w-16 h-16 object-contain mb-2" />
+                    <span className="text-sm text-gray-800 dark:text-gray-200">{tech.name}</span>
+                  </div>
+                ))
+              ) : (
+                <span className="text-gray-500 dark:text-gray-300">No technologies listed.</span>
+              )}
+            </div>
+            <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Why these choices?</h3>
+            <p className="text-base text-gray-700 dark:text-gray-300">
+              {/* You can customize this explanation per project if you wish */}
+              These technologies were selected for their modern features, scalability, and strong community support, enabling rapid development and robust performance for this project.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
